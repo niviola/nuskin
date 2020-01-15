@@ -17,7 +17,7 @@ public class BaseTest {
     private final PropertyReader pr = new PropertyReader();
 
     @Managed(uniqueSession=true, clearCookies=BeforeEachTest)
-    private static WebDriver driver;
+    public WebDriver driver;
 
     @Before
     public void setUp() {
@@ -31,9 +31,4 @@ public class BaseTest {
             driver.quit();
         }
     }
-
-    public static WebDriver getDriver() {
-        return driver;
-    }
-
 }

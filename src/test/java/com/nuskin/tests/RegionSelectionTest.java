@@ -1,5 +1,6 @@
 package com.nuskin.tests;
 
+import com.nuskin.pages.HomePage;
 import com.nuskin.pages.RegionSelectionPage;
 import com.nuskin.steps.RegionSelectionStep;
 import org.junit.Test;
@@ -7,6 +8,8 @@ import org.junit.Test;
 public class RegionSelectionTest extends BaseTest {
 
     private final RegionSelectionPage page = new RegionSelectionPage();
+    private final HomePage homePage = new HomePage();
+
     private final RegionSelectionStep step = new RegionSelectionStep();
 
     /**
@@ -15,8 +18,9 @@ public class RegionSelectionTest extends BaseTest {
     @Test
     public void verify_HomePage_opens() {
         step.goToRegionSelectionPage();
-        step.clickOnElement(page.getPaperTabAsiaPacific());
-        step.clickOnElement(page.getLinkPhilippines());
+        step.clickOnElement(homePage.getBtnSelectorDropDown());
+//        step.clickOnElement(page.getPaperTabAsiaPacific());
+//        step.clickOnElement(page.getLinkPhilippines());
 
     }
 

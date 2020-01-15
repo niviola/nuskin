@@ -3,14 +3,9 @@ package com.nuskin.pages;
 import org.openqa.selenium.By;
 
 public class HomePage extends BasePage {
-    private final By btnLogin = By.id("btn-log");
-    private final By btnRegistration = By.id("btn-reg");
+    private final By btnSelectorDropDown = By.xpath("/html/body/article/app-drawer-layout/div[1]/header/div[1]/div/div[3]/div");
 
-    public By getBtnLogin() {
-        return btnLogin;
-    }
-
-    public By getBtnRegistration() {
-        return btnRegistration;
+    public By getBtnSelectorDropDown() {
+        return btnSelectorDropDown;
     }
 }
